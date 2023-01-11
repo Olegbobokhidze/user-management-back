@@ -45,6 +45,6 @@ app.post("/createUser", async (req, res) => {
   await newUser.save();
   res.json(user);
 });
-app.listen(3010, (): void => {
+app.listen(process.env.CYCLIC_URL || 3010, (): void => {
   console.log("Server running on port 3001");
 });
